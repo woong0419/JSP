@@ -44,6 +44,80 @@ const restaurant = {
     console.log(otherIngredients);
   }
 };
+
+//ARRAY
+let arr = ['a', 'b', 'c', 'd', 'e'];
+const arr2 = ['i', 'j', 'k', 'l', 'm']
+//SLICE
+arr.slice(2) // [c,d,e]
+arr.slice(2, 4) //[c,d]
+arr.slice(-2) //[d,e]
+arr.slice(-1) // [e]
+
+//REVERSE - MUTATE
+arr.reverse() //[e,d,c,b,a] 
+
+//CONCAT
+const letters = arr.concat(arr2) // = [...arr,...arr2]
+
+//JOIN
+letters.join('-') // a-b-c-d-e-f-g-h-i-j-k-l-m
+
+//GETTING LAST ELEMENT
+arr[arr.length - 1];
+arr.at(-1)
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300]
+//FOR OF
+for (const movement of movements) {
+  if (movement > 0) {
+    console.log(movement)
+  } else {
+    console.log(movement)
+  }
+}
+
+//FOREACH
+movements.forEach(function (movement) {
+  if (movement > 0) {
+    console.log(movement)
+  } else {
+    console.log(movement)
+  }
+})
+
+
+
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu]
+
+for (const item of menu) {
+  console.log(item);
+}
+
+for (const item of menu.entries()) {
+  console.log(item);
+}
+
+console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours.fri?.open);
+
+const properties = Object.keys(restaurant.openingHours);
+console.log(properties);
+
+for (const day of Object.keys(properties)) {
+  console.log(day)
+}
+
+const values = Object.values(restaurant.openingHours)
+console.log(values)
+
+const entries = Object.entries(restaurant.openingHours);
+
+for (const [key, { open, close }] of entries) {
+  console.log(key, open, close)
+}
+
+/* 
 //Destructuring
 const array = [1, 2, ...[3, 4]]
 
@@ -73,8 +147,6 @@ const x = [23, 5, 7]
 add(...x)
 
 restaurant.orderPizza('mushrooms', 'onion', 'olives')
-
-/* 
 //Destructuring Object
 const arr = [7, 8, 9];
 const newArr = [1, 2, ...arr]
