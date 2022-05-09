@@ -9,6 +9,9 @@ const ProductItem = (props) => {
   const { title, price, description, id } = props;
 
   const addToCartHandler = () => {
+    // send http request
+    // fetch('db-url', {method: 'POST', body: JSON.stringify(newCart)})
+
     dispatch(cartActions.addItemToCart({
       id, title, price
     }
