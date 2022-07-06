@@ -6,6 +6,7 @@ const Welcome = () => {
       <h1>The Welcome Page</h1>
       <Route path="/welcome/new-user">
         <p>Welcome New User</p>
+        <p>edited user name and email</p>
       </Route>
     </section>
   );
