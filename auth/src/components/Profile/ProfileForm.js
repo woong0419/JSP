@@ -6,6 +6,7 @@ import AuthContext from '../../store/auth-context';
 import classes from './ProfileForm.module.css';
 
 const ProfileForm = () => {
+  const KEY = process.env.REACT_APP_KEY;
   const history = useHistory();
   const newPasswordInputRef = useRef();
   const authCtx = useContext(AuthContext);
@@ -17,7 +18,7 @@ const ProfileForm = () => {
     //
 
     fetch(
-      'https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyC4VcG5F9GwKHlCcUx0qjYRMBsSeCFlu3w',
+      `https://identitytoolkit.googleapis.com/v1/accounts:update?key=${KEY}`,
       {
         method: 'POST',
         body: JSON.stringify({
