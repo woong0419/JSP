@@ -100,3 +100,4 @@ document.querySelector('.btn--new').addEventListener('click', () => {
     .querySelector(`.player--${currentPlayer}`)
     .classList.add('player--active');
 });
+//edit
